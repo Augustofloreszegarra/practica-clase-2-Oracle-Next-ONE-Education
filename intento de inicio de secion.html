@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+    var intetoInicio = 1
+
+    while (intetoInicio <=3){
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+        
+        if(inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada){
+            alert("Bienvenido al sistema" + inicioDeSesionIngresado);
+            intetoInicio = 4; // esto para que deje de pedir inicio se secion cuando lo hizo bien
+        } else {
+            if (intetoInicio == 3) {
+                alert("Demasiados intentos!");
+            } else {
+                alert("Inicio de sesión inválido. Favor intente de nuevo");
+            }
+        }
+        intetoInicio++;
+    }
+</script>
